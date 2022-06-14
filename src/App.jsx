@@ -1,5 +1,7 @@
 // gallery
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { useEffectOnce } from "./hooks/useEffectOnce";
+
 import "./App.css";
 
 // components
@@ -9,20 +11,17 @@ import MovieRow from "./components/MovieRow";
 function App() {
   const [movieList, setMovieList] = useState([]);
 
-  useEffect(() => {
-    const loadAll = async () => {
-      let list = await Tmdb.getHomeList();
-      setMovieList(list);
-    };
-
-    loadAll();
+  useEffectOnce(async () => {
+    let list = await Tmdb.getHomeList();
+    console.log(list);
+    setMovieList(list);
   });
 
   return (
     <div className="page">
       <section className="lists">
         {movieList.map((item, key) => (
-          <MovieRow key={key} title={item.title} item={item.items} />
+          <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
     </div>
@@ -30,3 +29,5 @@ function App() {
 }
 
 export default App;
+
+// https://youtu.be/tBweoUiMsDg?t=3673
