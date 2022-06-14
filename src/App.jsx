@@ -22,7 +22,7 @@ function App() {
     <div className="page">
       <section className="lists">
         {movieList.map((item, key) => (
-          <MovieRow key={key} title={item.title} item={item.items}/>
+          <MovieRow key={key} title={item.title} item={item.items} />
         ))}
       </section>
     </div>
