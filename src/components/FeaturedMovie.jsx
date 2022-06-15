@@ -37,7 +37,7 @@ export default ({ item }) => {
             <a className="watch--button" href={`/watch/${item.id}`}>
               ► Assistir
             </a>
-            <a className="list--button" href={`/list/add/${item.id}`}>
+            <a className="info--button" href={`/list/add/${item.id}`}>
               <ImInfo className="info-icon" /> Mais Info
             </a>
           </div>
