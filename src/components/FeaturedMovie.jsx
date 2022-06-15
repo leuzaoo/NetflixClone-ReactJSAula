@@ -22,21 +22,21 @@ export default ({ item }) => {
           <div className="featured--name">{item.original_name}</div>
           <div className="featured--info">
             <div className="featured--points">
-              Pontuaçao: {item.vote_average}
+             {item.vote_average} Pontos
             </div>
             <div className="featured--year">{firstDate.getFullYear()}</div>
             <div className="featured--seasons">
               {item.number_of_seasons} Temporada
               {item.number_of_seasons !== 1 ? "s" : ""}
             </div>
-            <div className="featured--description">{item.overview}</div>
-            <div className="featured--buttons">
-              <a href={`/watch/${item.id}`}>► Assistir</a>
-              <a href={`/list/add/${item.id}`}>+ Minha Lista</a>
-            </div>
-            <div className="featured--genres">
-              <strong>Gêneros:</strong> {genres.join(", ")}
-            </div>
+          </div>
+          <div className="featured--description">{item.overview}</div>
+          <div className="featured--buttons">
+            <a className="watch--button" href={`/watch/${item.id}`}>► Assistir</a>
+            <a className="list--button" href={`/list/add/${item.id}`}>+ Minha Lista</a>
+          </div>
+          <div className="featured--genres">
+            <strong>Gêneros:</strong> {genres.join(", ")}
           </div>
         </div>
       </div>
