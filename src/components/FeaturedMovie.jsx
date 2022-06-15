@@ -1,5 +1,6 @@
 import React from "react";
 import "./FeaturedMovie.css";
+import { ImInfo } from "react-icons/im";
 
 export default ({ item }) => {
   let firstDate = new Date(item.first_air_date);
@@ -21,9 +22,7 @@ export default ({ item }) => {
         <div className="featured--horizontal">
           <div className="featured--name">{item.original_name}</div>
           <div className="featured--info">
-            <div className="featured--points">
-             {item.vote_average} Pontos
-            </div>
+            <div className="featured--points">{item.vote_average} Pontos</div>
             <div className="featured--year">{firstDate.getFullYear()}</div>
             <div className="featured--seasons">
               {item.number_of_seasons} Temporada
@@ -31,12 +30,16 @@ export default ({ item }) => {
             </div>
           </div>
           <div className="featured--description">{item.overview}</div>
-          <div className="featured--buttons">
-            <a className="watch--button" href={`/watch/${item.id}`}>► Assistir</a>
-            <a className="list--button" href={`/list/add/${item.id}`}>+ Minha Lista</a>
-          </div>
           <div className="featured--genres">
-            <strong>Gêneros:</strong> {genres.join(", ")}
+            <strong>Gênero:</strong> {genres.join(", ")}
+          </div>
+          <div className="featured--buttons">
+            <a className="watch--button" href={`/watch/${item.id}`}>
+              ► Assistir
+            </a>
+            <a className="list--button" href={`/list/add/${item.id}`}>
+              <ImInfo className="info-icon" /> Mais Info
+            </a>
           </div>
         </div>
       </div>

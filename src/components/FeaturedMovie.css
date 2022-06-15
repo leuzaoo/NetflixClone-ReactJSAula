@@ -23,7 +23,7 @@
   font-weight: bold;
   text-transform: uppercase;
   margin-left: 30px;
-  padding-top: 30px;
+  padding-top: 150px;
 }
 
 .featured--info {
@@ -50,6 +50,7 @@
   margin-left: 30px;
   margin-top: 15px;
   width: 30%;
+  font-size: 24px;
 }
 
 .featured--genres {
@@ -58,20 +59,46 @@
 }
 
 .featured--buttons {
-  margin: 30px 0;
+  margin: 60px 0;
   margin-left: 30px;
+}
+
+.featured--buttons a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
 }
 
 .list--button {
-  background-color: red;
-  padding: 15px;
+  background-color: rgb(41, 41, 41);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  padding: 7px 20px;
   margin-left: 30px;
   font-size: 32px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
 }
 
 .watch--button {
-  background-color: red;
-  padding: 15px;
-  margin-left: 30px;
+  background-color: rgb(41, 41, 41);
+  padding: 7px 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   font-size: 32px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.info-icon {
+  font-size: 24px;
+  padding-top: 3px;
+}
+
+.list--button:hover {
+  transition: all 0.3s ease;
+  background-color: rgb(59, 59, 59);
+}
+
+.watch--button:hover {
+  transition: all 0.3s ease;
+  background-color: rgb(59, 59, 59);
 }
