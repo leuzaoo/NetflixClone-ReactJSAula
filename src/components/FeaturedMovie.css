@@ -102,3 +102,22 @@
   color: black;
   background-color: rgb(175, 175, 175);
 }
+
+@media screen and (max-width: 768px) {
+  .featured--description {
+    width: 75%;
+    font-size: 16px;
+  }
+
+  .featured--name {
+    font-size: 48px;
+  }
+
+  .featured--points,
+  .featured--year,
+  .featured--seasons,
+  .featured--genres {
+    font-size: 18px;
+  }
+
+}

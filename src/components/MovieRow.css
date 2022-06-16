@@ -68,4 +68,8 @@
   .movieRow--right {
     opacity: 1;
   }
+
+.movie-row {
+    overflow-x: hidden;
+  }
 }
