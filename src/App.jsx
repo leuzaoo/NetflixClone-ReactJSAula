@@ -28,7 +28,7 @@ function App() {
   });
 
   return (
-    <div className="page">
+    <div id="home" className="page">
       <Header />
 
       {featuredData && <FeaturedMovie item={featuredData} />}
@@ -38,6 +38,24 @@ function App() {
           <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
+
+      <footer>
+        <div class="footer card text-center">
+          <div class="card-header">
+            Desevolvido por Leonardo Costa de Oliveira
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Netflix Interface</h5>
+            <p class="card-text">
+              Aplicação desenvolvida para aplicação de conhecimento ReactJS e
+              API REST.
+            </p>
+            <a href="#home" class="btn btn-primary">
+              Ir para Filmes
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
