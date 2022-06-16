@@ -16,7 +16,7 @@ function App() {
 
   useEffectOnce(async () => {
     let list = await Tmdb.getHomeList();
-    // setMovieList(list);
+    setMovieList(list);
 
     let originals = list.filter((i) => i.slug === "originals");
     let randomChosen = Math.floor(
@@ -24,7 +24,7 @@ function App() {
     );
     let chosen = originals[0].items.results[randomChosen];
     let chosenInfo = await Tmdb.getMovieInfo(chosen.id, "tv");
-    // setFeaturedData(chosenInfo);
+    setFeaturedData(chosenInfo);
   });
 
   return (
@@ -57,10 +57,11 @@ function App() {
         </div>
       </footer>
 
-          <div className="loading">
-            <img src="https://i.gifer.com/8Etj.gif" alt="carregando" />
-          </div>
-
+      {movieList.length <= 0 && (
+        <div className="loading">
+          <img src="https://i.gifer.com/8Etj.gif" alt="carregando" />
+        </div>
+      )}
     </div>
   );
 }

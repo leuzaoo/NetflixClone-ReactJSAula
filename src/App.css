@@ -15,3 +15,16 @@ body {
 .footer{
   background-color: #111111;
 }
+
+.loading{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
