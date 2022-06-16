@@ -63,3 +63,9 @@
   background-color: rgba(0, 0, 0, 0.699);
 }
 
+@media screen and (max-width: 768px) {
+  .movieRow--left,
+  .movieRow--right {
+    opacity: 1;
+  }
+}
