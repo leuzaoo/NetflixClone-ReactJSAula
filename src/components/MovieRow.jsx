@@ -7,7 +7,7 @@ export default ({ title, items }) => {
   const [scrollX, setScrollX] = useState(-400);
 
   const handleLeftArrow = () => {
-    let x = scrollX + 150;
+    let x = scrollX + Math.round(window.innerWidth / 2);
     if (x > 0) {
       x = 0;
     }
@@ -15,7 +15,11 @@ export default ({ title, items }) => {
     setScrollX(x);
   };
 
-  const handleRightArrow = () => {};
+  const handleRightArrow = () => {
+
+
+    
+  };
 
   return (
     <div className="movie-row">
